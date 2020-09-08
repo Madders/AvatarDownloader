@@ -10,6 +10,12 @@ namespace AvatarDownloader
         {
 			CheckFolder("Downloads");
 
+			if(args == null || args.Length != 1)
+            {
+				Console.WriteLine("Expected command line parameter of the avatars marketplace id.");
+				return;
+            }
+
 			DownloadAvatar(args[0] + "-v1");
 		}
 
